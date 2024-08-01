@@ -1,0 +1,516 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Header styles */
+.header {
+  background-color:#f6a8c6c5; /* Darker pink for the header */
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+
+}
+.search-container {
+  position: relative;
+}
+.search-bar {
+  padding: 5px 30px 5px 10px; /* Add padding to the right for the icon */
+  font-size: 14px;
+  box-shadow: #000000;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  width: 400px; /* Adjust the width as needed */
+  background-color: #ffffff; /* Match the header's background color */
+  color: #fff; /* Optional: Change text color to be readable */
+}
+
+.search-bar::placeholder {
+  color: #000000; /* Optional: Change placeholder text color to be readable */
+}
+
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000000;
+}
+
+
+.search-bar svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Navbar styles */
+/* Navbar Styles */
+.navbar {
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fdd8e5; /* Light pink background */
+  padding: 10px 10px; /* Add padding for spacing */
+}
+
+.nav-button {
+  text-decoration: none;
+  color: #333; /* Text color for buttons */
+  padding:0px 20px; /* Button padding */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Font size for buttons */
+}
+
+.nav-button:hover {
+  color: #000; /* Change color on hover */
+  background-color: #ffabc7; /* Slightly darker pink on hover */
+  border-radius: 6px; /* Optional: rounded corners */
+  padding-top: 3px;
+}
+
+
+/* Footer styles */
+.footer {
+  background-color: #fdd8e5;
+  padding: 40px 20px;
+  text-align: left;
+  border-top: 1px solid #ccc;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.footer-section a {
+  display: block;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #666;
+}
+
+.footer-subscribe {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+}
+
+.footer-subscribe h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.footer-subscribe input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.footer-subscribe button {
+  padding: 10px 15px;
+  margin-top: 7px;
+  margin-left: 3px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #666;
+  font-size: 24px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #666;
+}
+
+.footer-language {
+  display: flex;
+  align-items: center;
+}
+
+.footer-language select {
+  margin-left: 10px;
+  padding: 5px;
+}
+.social-icon.facebook {
+  color: #3b5998; /* Facebook blue */
+}
+
+.social-icon.twitter {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.social-icon.instagram {
+  color: #e4405f; /* Instagram pink */
+}
+
+.social-icon.youtube {
+  color: #ff0000; /* YouTube red */
+}
+
+
+/* Carousel container */
+.alice-carousel {
+  width: fit-content;
+  height: 70vh; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+/* Carousel items */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+/* Carousel images */
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+  position: relative;/* Ensure images cover the container */
+  width: 1920px;
+  aspect-ratio: auto 1920 / 800;
+  height: 800px;
+}
+
+/*recommended page*..........................*/
+
+
+.heading {
+    font-family: 'Arial, sans-serif';
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    background: linear-gradient(45deg,#f6a8c6c5 ,  #fdd8e5);
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* index.css */
+
+/* Overall container for the recommended page */
+.recommended-page {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading styles */
+
+
+/* Individual carousel items */
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+/* Styling for the images */
+.items img {
+  width: 100%; /* Ensure the image fits the carousel width */
+  height: 375px; /* Maintain the aspect ratio */
+  max-height: 450px; /* Adjust the max-height as needed */
+  border-radius: 10px;
+}
+
+/* Alice Carousel custom styles */
+.alice-carousel__wrapper {
+  padding: 20px 0;
+}
+
+
+.alice-carousel__dots {
+  margin-top: 15px;
+}
+
+/* Adjust responsiveness */
+@media (max-width: 1024px) {
+  .items img {
+      max-height: 250px;
+  }
+}
+
+@media (max-width: 568px) {
+  .items img {
+      max-height: 200px;
+  }
+}
+/*.........topratedproduct...........*/
+
+.topratedpage-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.items2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Styling for the images */
+.items2 img {
+  width: 100%; /* Ensure the image fits the carousel width */
+  height: 370px; /* Maintain the aspect ratio */
+  max-height: 450px; /* Adjust the max-height as needed */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*...........recentlyviewed & sponsored...........*/
+/* index.css */
+
+/* Overall container for sections */
+.sponsored-section, .recentlyviewed-page {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Sponsored section styling */
+.sponsored-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsored-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.sponsored-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Individual carousel items */
+.items1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Styling for the images */
+.items1 img {
+  width: 100%; /* Ensure the image fits the carousel width */
+  height: 370px; /* Maintain the aspect ratio */
+  max-height: 450px; /* Adjust the max-height as needed */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Alice Carousel custom styles */
+.alice-carousel__wrapper {
+  padding: 20px 0;
+}
+
+
+.alice-carousel__dots {
+  margin-top: 15px;
+}
+
+/* Adjust responsiveness */
+@media (max-width: 1024px) {
+  .item img {
+      max-height: 250px;
+  }
+
+  .sponsored-item {
+      width: 250px;
+      height: 370px;
+  }
+}
+
+@media (max-width: 568px) {
+  .item img {
+      max-height: 200px;
+  }
+
+  .sponsored-item {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+/*........Signup..........*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Import Roboto for the headline */
+.headline {
+  font-family: "Great Vibes", cursive;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ff4d94; /* Special color for the headline */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Parent container */
+.parent-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* Full viewport height for vertical centering */
+  background-color: #f4f4f4; /* Optional: background color to see the container */
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+/* Auth container */
+.auth-container {
+  
+  width: 500px; /* Adjust width as needed */
+  padding: 20px; /* Adjust padding as needed */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgb(255, 233, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+  justify-content: center;
+}
+
+.auth-container form {
+  width: 100%; /* Ensure the form takes the full width of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-container input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.auth-container input:focus {
+  border-color: #ff66b2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(247, 172, 210, 0.627);
+}
+
+.auth-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff66b2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: #ff4d94;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}

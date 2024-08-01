@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    background-color: #e3a8a8; /* Darker pink for the header */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #e49c9c; /* Match the header's background color */
+    border-radius: 4px;
+    padding: 5px; /* Add padding to ensure space for the icon */
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e57373; /* Match the header's background color */
+    color: #fff; /* Optional: Change text color to be readable */
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .search-bar::placeholder {
+    color: #fff; /* Optional: Change placeholder text color to be readable */
+  }
+  
+  .search-icon {
+    color: #fff; /* Match the icon color to the search bar text color */
+    font-size: 20px;
+    margin-left: 10px; /* Adjust margin to position icon inside the search box */
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons svg {
+    margin-left: 15px;
+    cursor: pointer;
+    color: #fff; /* Optional: Change icon color to match the header background */
+  }
+  
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ececec;
+    padding: 10px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ececec;
+}
+
+.footer-links div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button:hover {
+    text-decoration: none;
+}
+/*.......recommended page*/
+.recommended-page {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.heading {
+    font-family: 'Arial, sans-serif';
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
